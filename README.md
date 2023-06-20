@@ -1,1 +1,6 @@
-# WPF_Sirket
+# WPF_Sirket![1](https://github.com/bernaysl/WPF_Sirket/assets/78691060/2252ad9e-ddc8-41ea-b9de-d19147e14e1b)
+![2](https://github.com/bernaysl/WPF_Sirket/assets/78691060/4b8d4a25-c759-40ae-861a-dd1ea5fb0716)
+![3](https://github.com/bernaysl/WPF_Sirket/assets/78691060/b70e6f1b-2789-4951-935e-9a2167208370)
+![4](https://github.com/bernaysl/WPF_Sirket/assets/78691060/0ded5fa4-0551-4226-b7e4-3a8c1134a487)
+![5](https://github.com/bernaysl/WPF_Sirket/assets/78691060/120b6ea3-5cb8-49a5-b1e2-6966bcc297b5)
+![6](https://github.com/bernaysl/WPF_Sirket/assets/78691060/1001ee75-4ce4-4143-aca9-740143993443)
