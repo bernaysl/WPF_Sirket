@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPF_Sirket.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Sirket"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800" WindowStartupLocation="CenterScreen" FontSize="25">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bg3.jpg"/>
+        </Grid.Background>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*" />
+            <ColumnDefinition Width="202" />
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="116*" />
+            <ColumnDefinition Width="190*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="201*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="3" Content="Kullanıcı Adı:" HorizontalAlignment="Left" Margin="36,133,0,0" VerticalAlignment="Top" Height="40" Width="130" FontSize="20" Grid.ColumnSpan="2"></Label>
+        <Label Grid.Column="3" Content="Şifre:" HorizontalAlignment="Left" Margin="36,0,0,0" VerticalAlignment="Center" Height="40" Width="130" FontSize="20" Grid.ColumnSpan="2"></Label>
+        <TextBox Name="txt_username" Grid.Column="4" HorizontalAlignment="Left" Margin="49,133,0,0" VerticalAlignment="Top" Width="200" Height="40" Grid.ColumnSpan="2"></TextBox>
+        <PasswordBox Name="txt_password" Grid.Column="4" HorizontalAlignment="Left" Margin="49,0,0,0" VerticalAlignment="Center" Width="200" Height="40" Grid.ColumnSpan="2"></PasswordBox>
+        <Button Grid.Column="4" Content="Login" HorizontalAlignment="Left" Margin="11,294,0,0" VerticalAlignment="Top" Height="33" Width="88" Name="Login" Click="Login_Click" FontSize="20" Background="LightGray" FontWeight="Bold"></Button>
+        <Label Grid.Column="1" Content="KB Yazılım Şirketi Giriş Sayfası" HorizontalAlignment="Left" Margin="185,55,0,0" VerticalAlignment="Top" Grid.ColumnSpan="6" FontSize="30" FontWeight="Bold" Height="50" Width="444"></Label>
+    </Grid>
+</Window>

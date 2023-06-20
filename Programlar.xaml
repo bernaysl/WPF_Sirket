@@ -1,0 +1,88 @@
+﻿<Window x:Class="WPF_Sirket.Programlar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Sirket"
+        mc:Ignorable="d"
+        Title="Programlar" Height="530" Width="900" Background="Gray" FontSize="25" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="600" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <Label Content="Program Kayıt Bilgileri" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="180,0,0,0" FontSize="40" FontWeight="Bold"></Label>
+            <Image Source="/program1.jpeg" Margin="44,0,840,0"></Image>
+            <!--program ikonu sol üst-->
+            <Button Name="btnHome" Click="btnHome_Click" BorderThickness="0" Margin="741,0,139,0">
+                <Button.Background>
+                    <ImageBrush ImageSource="/home.png"/>
+                </Button.Background>
+                <!---geri dön butonu sağ üst-->
+                <Image Source="images\home.png"></Image>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="5,5,1,25">
+            <!--birincii row baslangıc-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="75*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Label Content="Program Adı" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" FontSize="20" Width="150" Height="40"></Label>
+            <Label Grid.Row="1" Content="Proje Sayısı" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="20" Width="180" Height="40" ></Label>
+            <Label Grid.Row="2" Content="Departman Sayısı" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="20" Width="170" Height="40" ></Label>
+
+            <TextBox Grid.Row="0" Grid.Column="1" Name="txtAdi" Margin="120,10,0,10" HorizontalAlignment="Right" Width="200" FontSize="30"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" Name="txtProjeSayisi" Margin="150,10,0,10" HorizontalAlignment="Right" Width="200" FontSize="30"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" Name="txtDepartmanSayisi" Margin="150,10,0,10" HorizontalAlignment="Right" Width="200" FontSize="30"></TextBox>
+            <Label Grid.Row="3" Content="Başlangıç Tarihi" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="20" Width="170" Height="40" />
+            <DatePicker Grid.Row="3" Grid.Column="1" Name="dtpTarih" Margin="172,10,0,10" HorizontalAlignment="Left" Width="200" FontSize="30"/>
+
+
+
+        </Grid>
+        <!--birincii row bitis-->
+
+        <Grid Grid.Column="1"/>
+        <!--bu gridi diğer sekilde kapatmadığımız icin belki hata alabiliriz -->
+        <Label Grid.Row="2" Grid.Column="1" Content="ID" Margin="0,0,50,50" Name="ID" HorizontalAlignment="Right" Width="530"/>
+        <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="413" Margin="60,12,0,0" Name="txtID" VerticalAlignment="Top"></TextBox>
+        <DataGrid Name="dgProgram" Grid.Column="1" Grid.Row="1" Margin="10,0,127,0" SelectionChanged="dgProgram_SelectionChanged" SelectedCellsChanged="dgProgram_SelectedCellsChanged" Background="SandyBrown" FontSize="15"></DataGrid>
+        <Button Name="btnEkle" Click="btnEkle_Click" Grid.Row="1" Margin="41,250,290,25" Background="SandyBrown" BorderBrush="Black" BorderThickness="2" Content="Ekle" FontSize="15">
+
+        </Button>
+        <Button Name="btnSil" Click="btnSil_Click" Grid.Row="1" Margin="168,250,164,24" Background="SandyBrown" BorderBrush="Black" BorderThickness="2" Content="Sil" FontSize="15">
+
+        </Button>
+        <Button Name="btnGuncelle" Click="btnGuncelle_Click" Grid.Row="1" Margin="289,250,42,25" Background="SandyBrown" BorderBrush="Black" BorderThickness="2" Content="Güncelle" FontSize="15">
+
+        </Button>
+        <Button Name="btnListele" Click="btnListele_Click" Grid.Row="2" Margin="103,5,229,70" Background="SandyBrown" BorderBrush="Black" BorderThickness="2" Content="Listele" FontSize="15">
+
+        </Button>
+        <Button Name="btnTemizle" Click="btnTemizle_Click" Grid.Row="2" Margin="237,5,95,70" Background="SandyBrown" BorderBrush="Black" BorderThickness="2" Content="Temizle" FontSize="15">
+
+        </Button>
+        <Button x:Name="btnAra" Click="btnAra_Click" Grid.Row="2" Margin="60,52,472,23" Background="SandyBrown" BorderBrush="Black" BorderThickness="2" Content="Ara" FontSize="15" Grid.Column="1"/>
+
+
+    </Grid>
+
+</Window>
